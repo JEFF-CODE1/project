@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <div id="formBody">
+        <h1>STUDENT GRADE ANALYZER</h1>
+        <form id="studentForm">
+            <section id="upperSection">
+                <p id="sign"></p>
+             <label>Enter Pass Mark         
+                <input type="number" id="passMark" id="num" type="text" placeholder="Enter-passMark" min ="0">
+            </label>
+            <label>Enter Student Name   
+                <input type="text" id="name" type="text" placeholder="Enter-name">
+            </label>
+             <label>Enter Student Grade
+                <input type="number" id="score" id="num" type="text" placeholder="Enter-score" min="0">
+            </label>
+            <button type = "button" id="addMoreBtn">ADD MORE</button>
+            <button type = "button" id="submit">CALC</button>
+            <button  type = "button" id="clear">CLEAR</button>
+</section>
+<section id="lowerSection">
+              <label>
+            <div id="tcontent">
+                <h3>STUDENTS INFO</h3>
+                <table id="table">
+                    <style>
+                        table{background-color: orange;}
+                    </style>
+                    <thead id="t-header">
+                        <tr id="row-heading">
+                            <th>Name</th>
+                            <th>Score</th>
+                        </tr>
+
+                    </thead>
+                    <tbody id="table-content">
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+
+        
+
+</section>
+        </form>
+
+
+
+    </div>
+
+    <script src="project.js"></script>
+</body>
+</html>
