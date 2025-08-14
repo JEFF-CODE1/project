@@ -1,0 +1,83 @@
+*{
+margin: 0;
+  padding:0;
+   font-family: Arial, sans-serif;
+}
+html,body{
+    height: 100%;
+    background-image: url(Wallpaper.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 400px;
+}
+h1{
+    text-align: center;
+    padding-top: 80px;
+}
+
+#jeff{
+    background-color: yello;
+}
+
+#studentForm{
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height:300px;
+    background-color:transparent;
+    border: 2px solid #fff;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.test{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  
+
+}
+label,input,button{
+    display: inline-block;
+    
+}
+
+label{
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+}
+
+
+input{
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 2px;
+    background: transparent;
+    border-color: #fff;
+    border-radius: 50px;
+    
+    border:1px solid #fff;
+}
+input::placeholder{
+color: white;
+
+}
+button{
+    margin-left: 85px;
+    border-radius: 5px;
+    padding: 8px;
+    background: transparent;
+}
+button::hover{
+    background: white;
+}
+
+
+

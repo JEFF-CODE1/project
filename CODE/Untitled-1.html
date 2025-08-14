@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Guest List</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    form {
+        margin-bottom: 20px;
+    }
+    input {
+        padding: 8px;
+        font-size: 14px;
+    }
+    button {
+        padding: 8px 15px;
+        font-size: 14px;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    li {
+        background: #f2f2f2;
+        margin: 5px auto;
+        padding: 8px;
+        width: 200px;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+<h1>Guest List</h1>
+
+<form id="guestForm">
+    <input type="text" id="guestName" placeholder="Enter guest name" required>
+    <button type="submit">Add Guest</button>
+</form>
+
+<ul id="guestList"></ul>
+
+<script>
+    const form = document.getElementById("guestForm");
+    const guestInput = document.getElementById("guestName");
+    const guestList = document.getElementById("guestList");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // stop page refresh
+        
+        const name = guestInput.value.trim();
+        if (name !== "") {
+            const li = document.createElement("li");
+            li.textContent = name;
+            guestList.appendChild(li);
+            guestInput.value = ""; // clear input
+        }
+    });
+</script>
+
+</body>
+</html>

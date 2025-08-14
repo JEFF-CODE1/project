@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grade.css">
+    <title>GET STUDENT GRADE</title>
+</head>
+<body>
+   <div class="wrapper">
+        <h1>STUDENT GRADE ANALYZER</h1>
+        <form id="studentForm">
+           <section class="test">
+
+            <div class = "input-box">
+            <label for="name"> 
+                <input id="name" name ="name" required placeholder="Enter name">
+            </label>    
+           </div>
+             <div class = "input-box">  
+            <label for="grade"> 
+                <input id="grade" name ="grade" required placeholder="Enter grade">   
+            </label>   
+            </div> 
+                <button type ="submit"> Submit</button>
+           </section> 
+        </form>
+
+        <div id="jeff"></div>
+    </div>
+
+<script>
+    //html linking code
+document.getElementById("studentForm").addEventListener("submit",function(event){
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let score = document.getElementById("grade").value;
+    console.log(name);
+    console.log(score);
+
+    // create your student
+    // display students
+    // clear the form
+
+});
+
+document.getElementById("jeff").innerHTML = `<div style="color: red;"> Working right</div>`;
+
+function createStudent(name,score){
+    return{
+        name:name,
+        score:Number(score)
+}}
+function getScores(score){
+    return Number(score)
+}
+
+
+let addMore = true;
+let student = [];
+let scores = [];
+
+
+console.log(student);
+//make a score array
+console.log(scores);
+//average score
+let sum = 0
+for(let num of scores){
+    sum= sum+num;
+}
+let average = sum/scores.length
+console.log("THIS IS THE AVERAGE OF THE STUDUDENTS" + average);
+//name of student with the highest score
+
+ 
+ let highest = student[0]
+ for (let num of student){
+     if (student.score > highest.score){
+         highest = student
+     }
+ }
+ console.log("Highest score: " + highest.score + " by " + highest.name);
+ //passed and Failed
+let pass = 0  
+let fail = 0
+for (let num of scores){
+     if (num >= 50)
+     pass++
+     if (num < 50)
+     fail++
+     
+}
+console.log("amount that passed"+ pass)
+console.log("failed"+fail)
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
